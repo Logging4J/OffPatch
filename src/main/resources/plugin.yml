@@ -1,5 +1,5 @@
 name: Offpatch
-version: '${project.version}'
+version: 1.0
 main: sexy.l4j.offpatch.Offpatch
 authors: [ Logging4J ]
 description: Based Plugin Made By Logging4J
