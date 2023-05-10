@@ -14,7 +14,7 @@ public class CrystalPlaceListener implements Listener {
     public void onCrystalPlace(PlayerInteractEvent e){
         if(e.getAction() == Action.RIGHT_CLICK_BLOCK){
             Player p = e.getPlayer();
-            if (e.getMaterial() == Material.END_CRYSTAL && Offpatch.cl(p.getInventory().getItemInMainHand().getType(), p.getInventory().getItemInOffHand().getType())) {
+            if (e.getMaterial() == Material.END_CRYSTAL && Offpatch.check(p.getInventory().getItemInMainHand().getType(), p.getInventory().getItemInOffHand().getType())) {
                 e.setCancelled(true);
             }
         }

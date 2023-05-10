@@ -12,7 +12,7 @@ public class CrystalBreakListener implements Listener {
     public void onBreakCrystal(EntityDamageByEntityEvent e){
         if(!(e.getDamager() instanceof Player)){return;}
         Player p = (Player) e.getDamager();
-        if(Offpatch.cl(p.getInventory().getItemInMainHand().getType(), p.getInventory().getItemInOffHand().getType())){
+        if(Offpatch.check(p.getInventory().getItemInMainHand().getType(), p.getInventory().getItemInOffHand().getType())){
             e.setCancelled(true);
         }
     }

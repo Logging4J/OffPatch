@@ -13,15 +13,14 @@ public final class Offpatch extends JavaPlugin {
         System.out.println("Ty for using OffPatch By Logging4J...");
         getServer().getPluginManager().registerEvents(new CrystalBreakListener(), this);
         getServer().getPluginManager().registerEvents(new CrystalPlaceListener(), this);
-
     }
 
     @Override
     public void onDisable() {}
 
-    public static boolean cl(Material mainHand, Material offHand) {
+    public static boolean check(Material mainHand, Material offHand) {
         Material ga =Material.GOLDEN_APPLE;
         Material ec =Material.END_CRYSTAL;
-        return (mainHand == ga && offHand == ec);
+        return (mainHand == ga && offHand == ec) || (mainHand == ec && offHand == ga);
     }
 }
