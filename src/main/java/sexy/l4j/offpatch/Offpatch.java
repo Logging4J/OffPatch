@@ -6,11 +6,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 import sexy.l4j.offpatch.listeners.CrystalBreakListener;
 import sexy.l4j.offpatch.listeners.CrystalPlaceListener;
 
-public final class Offpatch extends JavaPlugin {
+public class Offpatch extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        System.out.println("Ty for using OffPatch By Logging4J...");
         getServer().getPluginManager().registerEvents(new CrystalBreakListener(), this);
         getServer().getPluginManager().registerEvents(new CrystalPlaceListener(), this);
     }
